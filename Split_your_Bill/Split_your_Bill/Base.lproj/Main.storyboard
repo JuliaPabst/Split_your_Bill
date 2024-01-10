@@ -51,16 +51,15 @@
                                                 <color key="textColor" systemColor="secondarySystemGroupedBackgroundColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="C2Z-se-kBB">
+                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="C2Z-se-kBB">
                                                 <rect key="frame" x="0.0" y="50" width="373" height="60"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nyp-ec-mMj">
-                                                        <rect key="frame" x="0.0" y="0.0" width="124.33333333333333" height="60"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="121" height="60"/>
+                                                        <color key="tintColor" red="0.11241256106085176" green="0.19174656723484851" blue="0.17362276508610847" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                         <state key="normal" title="Button"/>
                                                         <buttonConfiguration key="configuration" style="plain" title="0%">
-                                                            <backgroundConfiguration key="background">
-                                                                <color key="backgroundColor" red="0.24829322100000001" green="0.41632694009999999" blue="0.37646743659999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                                            </backgroundConfiguration>
+                                                            <backgroundConfiguration key="background"/>
                                                             <fontDescription key="titleFontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="30"/>
                                                             <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         </buttonConfiguration>
@@ -68,13 +67,12 @@
                                                             <action selector="tipChanged:" destination="BYZ-38-t0r" eventType="touchUpInside" id="oOr-Rz-zhH"/>
                                                         </connections>
                                                     </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="za8-U8-NNd">
-                                                        <rect key="frame" x="124.33333333333334" y="0.0" width="124.33333333333334" height="60"/>
+                                                    <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="za8-U8-NNd">
+                                                        <rect key="frame" x="126" y="0.0" width="121" height="60"/>
+                                                        <color key="tintColor" red="0.1124125611" green="0.1917465672" blue="0.17362276509999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                         <state key="normal" title="Button"/>
                                                         <buttonConfiguration key="configuration" style="plain" title="10%">
-                                                            <backgroundConfiguration key="background">
-                                                                <color key="backgroundColor" red="0.24829322100000001" green="0.41632694009999999" blue="0.37646743659999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                                            </backgroundConfiguration>
+                                                            <backgroundConfiguration key="background"/>
                                                             <fontDescription key="titleFontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="30"/>
                                                             <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         </buttonConfiguration>
@@ -82,13 +80,12 @@
                                                             <action selector="tipChanged:" destination="BYZ-38-t0r" eventType="touchUpInside" id="cZd-nd-1Ja"/>
                                                         </connections>
                                                     </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BKS-24-ncX">
-                                                        <rect key="frame" x="248.66666666666671" y="0.0" width="124.33333333333334" height="60"/>
+                                                    <button opaque="NO" tag="2" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BKS-24-ncX">
+                                                        <rect key="frame" x="252" y="0.0" width="121" height="60"/>
+                                                        <color key="tintColor" red="0.1124125611" green="0.1917465672" blue="0.17362276509999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                         <state key="normal" title="Button"/>
                                                         <buttonConfiguration key="configuration" style="plain" title="20%">
-                                                            <backgroundConfiguration key="background">
-                                                                <color key="backgroundColor" red="0.24829322100000001" green="0.41632694009999999" blue="0.37646743659999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                                            </backgroundConfiguration>
+                                                            <backgroundConfiguration key="background"/>
                                                             <fontDescription key="titleFontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="30"/>
                                                             <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         </buttonConfiguration>
