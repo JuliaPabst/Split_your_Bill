@@ -55,7 +55,15 @@ class CalculatorViewController: UIViewController, UITextFieldDelegate {
     
     @IBAction func calculatePressed(_ sender: UIButton) {
         
-        print(textfield.text ?? "No text")
+        let bill = Double(textfield.text ?? "0.0") ?? 0.0
+        
+        let billWithTip = bill + bill * Double(tip)
+        
+        let amountOfPeople = stepper.value
+        
+        let splittedBill = billWithTip / amountOfPeople
+        
+        print(splittedBill)
     }
     
 }
