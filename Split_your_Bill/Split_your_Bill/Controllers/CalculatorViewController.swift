@@ -22,14 +22,15 @@ class CalculatorViewController: UIViewController, UITextFieldDelegate {
     var tip = 0.0
 
     override func viewDidLoad() {
+        super.viewDidLoad()
         stepper.transform = CGAffineTransform(scaleX: 1.5, y: 1.5)
-        textfield.delegate = self
         textfield.keyboardType = .numberPad
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(hideKeyboard))
+           view.addGestureRecognizer(tapGesture)
     }
     
-    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        textField.resignFirstResponder()
-        return true
+    @objc func hideKeyboard() {
+        view.endEditing(true)
     }
     
     @IBAction func tipChanged(_ sender: UIButton) {
