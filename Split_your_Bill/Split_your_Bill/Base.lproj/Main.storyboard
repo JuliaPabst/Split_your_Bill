@@ -180,6 +180,7 @@
                         <outlet property="textfield" destination="jai-n1-hqo" id="LCc-4y-4jM"/>
                         <outlet property="twentyButton" destination="BKS-24-ncX" id="RPg-LR-EIU"/>
                         <outlet property="zeroButton" destination="nyp-ec-mMj" id="Kv1-Ky-VEd"/>
+                        <segue destination="q6p-bN-tTW" kind="presentation" identifier="goToResults" id="sSd-ek-vdU"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -191,14 +192,14 @@
             <objects>
                 <viewController id="q6p-bN-tTW" customClass="ResultsViewController" customModule="Split_your_Bill" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="y1Q-NX-Fa6">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="bb3-4u-hC0">
-                                <rect key="frame" x="10" y="159" width="373" height="639"/>
+                                <rect key="frame" x="10" y="100" width="373" height="722"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="jhb-FF-y6f">
-                                        <rect key="frame" x="0.0" y="0.0" width="373" height="639"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="373" height="722"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Total per person" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6lb-pw-P2B">
                                                 <rect key="frame" x="0.0" y="0.0" width="373" height="30"/>
@@ -219,13 +220,13 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Split between two people  and split" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VV8-10-R1Y">
-                                                <rect key="frame" x="0.0" y="170" width="373" height="394"/>
+                                                <rect key="frame" x="0.0" y="170" width="373" height="477"/>
                                                 <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="30"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kGZ-0G-XbA">
-                                                <rect key="frame" x="0.0" y="584" width="373" height="55"/>
+                                                <rect key="frame" x="0.0" y="667" width="373" height="55"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="55" id="IBF-rK-VNq"/>
                                                 </constraints>

@@ -8,7 +8,7 @@
 import UIKit
 
 class CalculatorViewController: UIViewController, UITextFieldDelegate {
-
+    
     @IBOutlet var billTextField: UITextField!
     @IBOutlet var zeroButton: UIButton!
     @IBOutlet var tenButton: UIButton!
@@ -19,14 +19,20 @@ class CalculatorViewController: UIViewController, UITextFieldDelegate {
     
     @IBOutlet var textfield: UITextField!
     
-    var tip = 0.0
-
+    var textfieldWithDot: String = ""
+    var tip: Double = 0.0
+    var amountOfPeople: Double = 1.0
+    var splittedBill: Double = 0.0
+    var bill: Double = 0.0
+    var billWithTip: Double = 0.0
+    var finalBillPerPerson: String = ""
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         stepper.transform = CGAffineTransform(scaleX: 1.5, y: 1.5)
         textfield.keyboardType = .decimalPad
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(hideKeyboard))
-           view.addGestureRecognizer(tapGesture)
+        view.addGestureRecognizer(tapGesture)
     }
     
     @objc func hideKeyboard() {
@@ -49,24 +55,33 @@ class CalculatorViewController: UIViewController, UITextFieldDelegate {
     }
     
     @IBAction func stepperValueChanged(_ sender: UIStepper) {
-        splitNumberLabel.text = String(Int(sender.value))
+        splitNumberLabel.text = String(format: "%.0f", sender.value)
         
     }
     
     @IBAction func calculatePressed(_ sender: UIButton) {
+        textfieldWithDot = textfield.text!.replacingOccurrences(of: ",", with: ".")
         
-      
-        let textfieldWithDot = textfield.text!.replacingOccurrences(of: ",", with: ".")
-
-        let bill = Double(textfieldWithDot) ?? 0.0
+        bill = Double(textfieldWithDot) ?? 0.0
         
-        let billWithTip = bill + bill * Double(tip)
+        billWithTip = bill + bill * Double(tip)
         
-        let amountOfPeople = stepper.value
+        amountOfPeople = stepper.value
         
-        let splittedBill = billWithTip / amountOfPeople
+        splittedBill = billWithTip / amountOfPeople
         
-        print(splittedBill)
+        finalBillPerPerson =  String(format: "%.2f", splittedBill)
+        
+        self.performSegue(withIdentifier: "goToResults", sender: self)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "goToResults" {
+            let destinationVC = segue.destination as! ResultsViewController
+            destinationVC.result = splittedBill
+            destinationVC.numberOfPeople = amountOfPeople
+            destinationVC.tip = Int(tip)
+        }
     }
     
 }
