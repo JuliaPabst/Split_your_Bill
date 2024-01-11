@@ -80,7 +80,8 @@ class CalculatorViewController: UIViewController, UITextFieldDelegate {
             let destinationVC = segue.destination as! ResultsViewController
             destinationVC.result = splittedBill
             destinationVC.numberOfPeople = amountOfPeople
-            destinationVC.tip = Int(tip)
+            destinationVC.tip = Int(tip*100)
+            print(tip)
         }
     }
     
