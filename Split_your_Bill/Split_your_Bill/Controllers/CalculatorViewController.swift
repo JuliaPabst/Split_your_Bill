@@ -24,7 +24,7 @@ class CalculatorViewController: UIViewController, UITextFieldDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         stepper.transform = CGAffineTransform(scaleX: 1.5, y: 1.5)
-        textfield.keyboardType = .numberPad
+        textfield.keyboardType = .decimalPad
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(hideKeyboard))
            view.addGestureRecognizer(tapGesture)
     }
@@ -55,7 +55,10 @@ class CalculatorViewController: UIViewController, UITextFieldDelegate {
     
     @IBAction func calculatePressed(_ sender: UIButton) {
         
-        let bill = Double(textfield.text ?? "0.0") ?? 0.0
+      
+        let textfieldWithDot = textfield.text!.replacingOccurrences(of: ",", with: ".")
+
+        let bill = Double(textfieldWithDot) ?? 0.0
         
         let billWithTip = bill + bill * Double(tip)
         
